@@ -7,6 +7,10 @@ public class snakeAndLadderProg {
 		System.out.println("The player Position is: " + position);
 		while (position <= 100)
 		{
+			if (position < 0)
+			{
+				position = 0;
+			}
 			int diceRoll = (int) (Math.floor(Math.random() * 10 ) % 6 + 1);
 			System.out.println("Dice Roll: " + diceRoll);
 			position = position + diceRoll;
@@ -28,7 +32,6 @@ public class snakeAndLadderProg {
 					position = position - diceRoll;
 					System.out.println("Position: " + position);
 					break;
-
 			}
 		}
 	}
